@@ -105,3 +105,6 @@ dist
 
 # Parcel output
 .parcel-cache
+
+# ごみ・・・
+.DS_Store
