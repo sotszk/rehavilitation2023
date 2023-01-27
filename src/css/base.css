@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  /* background-color: rgba(#27292d, 0.9); */
+  @apply bg-gray-800;
+}
+
+main {
+}
+
+header {
+}
+
+.container {
+  max-width: 1024px;
+  padding: 0 24px;
+}
+
+.neko-icon-block {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @media (min-width: 600px) {
+    gap: 32px;
+  }
+}
+
+.neko-icon-block__image {
+  flex: 0 1 auto;
+}
+
+.neko-icon-block__content {
+  font-size: 16px;
+  @media (min-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.neko-icon {
+  max-width: 240px;
+  vertical-align: bottom;
+  border-radius: 9999;
+  border: 3px solid theme("colors.blue.400");
+}
+
+.full-width-gradient {
+  margin-top: 48px;
+  padding: 48px 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 80%
+  );
+}
+
+.kiken-text {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+}

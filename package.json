@@ -1,0 +1,29 @@
+{
+  "name": "webseisaku_arekore",
+  "version": "1.0.0",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel serve -p 1001",
+    "prebuild": "run-s cleanup",
+    "prebuild:dev": "run-s cleanup",
+    "build": "parcel build --no-source-maps",
+    "build:dev": "parcel build",
+    "cleanup": "rimraf dist"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.3",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
+    "postcss-hexrgba": "^2.1.0",
+    "postcss-import": "^15.1.0",
+    "postcss-nesting": "^11.0.0",
+    "rimraf": "^4.1.2",
+    "sharp": "^0.31.1",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.12"
+  }
+}
