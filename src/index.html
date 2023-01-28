@@ -14,7 +14,7 @@
 <body>
   <main>
     <header data-content="attr()は content プロパティ以外使えない" class="global-header">
-      <a href="#">
+      <a class="logo-link" href="#" aria-label="SUZUKI SOSAKU のロゴです">
         <svg class="logo w-20" id="b" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.19 112.59">
           <g id="c" data-name="レイヤー 7">
             <g>
@@ -85,12 +85,29 @@
       </div>
     </section>
 
+    <section class="bg-gray-100">
+      <div class="container">
+        <form class="py-8">
+          <p>フィールドにフォーカスするとプレースホルダーがにゅっと移動するやつ。うまく行かない。</p>
+          <div class="custom-input-label w-24 mt-4">
+            <input class="custom-input" type="name" placeholder="NAME">
+            <label class="custom-input-floating-label" data-content="NAME"><span
+                class="hidden-visually">NAME</span></label>
+          </div>
+
+          <div class="custom-input-label w-24 mt-4">
+            <input class="custom-input" type="email" placeholder="EMAIL">
+            <label class="custom-input-floating-label" data-content="EMAIL"></label>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section>
       <div class="container">
-        <h1 class="text-white">日常は続く…</h1>
+        <h1 class="text-white py-8">日々は続く…</h1>
         <div class="h-screen"></div>
       </div>
-
     </section>
 
   </main>
