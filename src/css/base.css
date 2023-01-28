@@ -1,6 +1,10 @@
+html {
+  --top-spacing: 90px;
+  scroll-padding-top: 90px;
+}
+
 body {
-  margin: 0;
-  /* background-color: rgba(#27292d, 0.9); */
+  margin: var(--top-spacing) 0 0;
   @apply bg-gray-800;
 }
 
