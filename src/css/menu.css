@@ -1,0 +1,77 @@
+:root {
+  --animation-second: 0.3s;
+}
+
+.navmenu {
+  position: fixed;
+  top: 16px;
+  right: 300px;
+  z-index: 100;
+}
+
+.menu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 100vh;
+  right: 0;
+  width: 80%;
+  background-color: #47dede;
+  visibility: hidden;
+  transform: translateX(100%);
+  perspective: 500px;
+  transition: transform var(--animation-second) 0s,
+    visibility 0s var(--animation-second);
+  @media screen and (min-width: 600px) {
+    width: 30%;
+  }
+}
+
+.menu.is-visible {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform var(--animation-second) 0s,
+    visibility var(--animation-second) 0s;
+}
+
+.menu > ul {
+  padding-top: 90px;
+  transform-origin: center bottom;
+  transform: rotateY(90deg);
+  transition: transform var(--animation-second);
+}
+
+.menu.is-visible > ul {
+  transform: translateZ(0);
+}
+
+.menu > ul li {
+  text-align: center;
+  flex: 1;
+}
+
+.menu > ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    display: block;
+  }
+  &:hover {
+    background-color: #45c4d4;
+    /* animation: hoverBlur 0.4s ease-in both; */
+  }
+}
+
+@keyframes hoverBlur {
+  10% {
+    filter: blur(3px);
+  }
+  100% {
+    filter: blur(0);
+  }
+}

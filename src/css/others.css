@@ -1,0 +1,15 @@
+.full-width-gradient {
+  margin-top: 48px;
+  padding: 48px 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 80%
+  );
+}
+
+.kiken-text {
+  color: white;
+  font-weight: bold;
+  font-size: 64px;
+}
