@@ -1,16 +1,23 @@
 import '~/src/js/helloworld';
 
 import Typed from 'typed.js';
+import { createApp } from 'vue';
 import add from '~/src/js/add';
+
+import VueApp from './js/vue/VueApp.vue';
 
 const result = add(20, 40);
 console.log('20 + 40 は？', result);
 
-new Typed('.typed', {
-  strings: ['Hi,', "I'm Sota Suzuki."],
-  typeSpeed: 40,
-  showCursor: false,
-});
+const typedEls = document.getElementsByClassName('typed');
+
+if (typedEls.length) {
+  new Typed('.typed', {
+    strings: ['Hi,', "I'm Sota Suzuki."],
+    typeSpeed: 40,
+    showCursor: false,
+  });
+}
 
 const menuOpenerEl = document.getElementById('menu-opener');
 const menuEl = document.getElementById('menu');
@@ -43,3 +50,6 @@ mainEl.addEventListener('click', (evt) => {
     evt.preventDefault();
   }
 });
+
+const vueApp = createApp(VueApp);
+vueApp.mount('#vue-app');

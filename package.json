@@ -4,7 +4,8 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "source": "src/index.html",
   "scripts": {
-    "start": "parcel serve -p 1001",
+    "start": "parcel -p 1001 --no-cache src/*.html",
+    "prestart": "run-s cleanup",
     "prebuild": "run-s cleanup",
     "prebuild:dev": "run-s cleanup",
     "build": "parcel build --no-source-maps",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.8.3",
     "@parcel/transformer-typescript-tsc": "^2.8.3",
+    "@parcel/transformer-vue": "2.8.3",
     "@typescript-eslint/parser": "^5.49.0",
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
@@ -34,6 +36,8 @@
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "typed.js": "^2.0.12"
+    "eslint-plugin-vue": "^9.9.0",
+    "typed.js": "^2.0.12",
+    "vue": "^3.2.36"
   }
 }

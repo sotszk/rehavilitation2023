@@ -1,0 +1,9 @@
+.form {
+  margin-top: theme('spacing.8');
+}
+
+.form__field {
+  &:not(:first-child) {
+    margin-top: theme('spacing.4');
+  }
+}
