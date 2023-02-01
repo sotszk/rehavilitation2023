@@ -5,6 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 「2023年最新版: HTMLのheadの書き方、head内に記述する要素の総まとめ」より記述を追加 -->
+  <!-- 参照URL: https://coliss.com/articles/build-websites/operation/work/html-head-elements.html -->
+
+  <!-- リソースがどこからロードされるかを制御できる -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+
+  <!-- Webサイトをアプリとして使う場合のみ記述 -->
+  <!-- <meta name="application-name" content="Application Name"> -->
+
   <title>フリーランスWeb制作ことはじめ</title>
   <script type="module">
     document.documentElement.classList.remove('no-js');
@@ -12,22 +22,58 @@
   </script>
   <link rel="stylesheet" href="index.css" />
   <link rel="stylesheet" href="css/style.css" />
+
+  <!-- 150字まで -->
   <meta name="description" content="説明文">
+
+  <!-- 検索エンジンのクロールとインデックス作成の動作を制御 -->
+  <meta name="robots" content="index,follow"><!-- すべての検索エンジン用 -->
+  <meta name="googlebot" content="index,follow"><!-- Google固有 -->
+
+  <!-- サイトリンクの検索ボックスを表示しないようにGoogleに指示 -->
+  <meta name="google" content="nositelinkssearchbox">
+
+  <!-- このドキュメントの翻訳を提供しないようGoogleに指示 -->
+  <meta name="google" content="notranslate">
+
+  <!-- ドキュメントの作成に使用したソフトウェアを記述 (WordPress、Dreamweaver など) -->
+  <meta name="generator" content="program">
+
+  <!-- リファラー情報の受け渡し方法を制御 -->
+  <meta name="referrer" content="no-referrer">
+
+  <!-- 連続した数字があると誤認識してしまうので、電話番号の自動リンク機能は停止 -->
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- 「off」に設定して、DNSプリフェッチを完全にオプトアウト -->
+  <meta http-equiv="x-dns-prefetch-control" content="off">
+
   <meta property="og:title" content="フリーランスWeb制作ことはじめ">
   <meta property="og:description" content="説明文">
   <!-- <meta property="og:image" content=""> -->
   <!-- <meta property="og:image:alt" content="画像の説明文"> -->
+  <meta property="og:site_name" content="サイトの名前">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:type" content="website">
   <!-- <meta property="og:url" content="https://path-to-page"> -->
   <!-- <meta name="twitter:card" content="summary"> -->
   <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Chrome, Firefox OS, Opera 用のカラー設定 -->
   <meta name="theme-color" content="#ff00ff">
+
   <!-- <link rel="icon" href="/images/favicon.ico"> -->
+
+  <!-- 最高解像度 192px -->
+  <!-- <link rel="icon" sizes="192x192" href="/images/logo.png"> -->
+
   <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
 
-  <!-- 180*180 -->
+  <!-- 180*180? 192px? -->
   <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+  <!-- for Safari -->
+  <!-- <link rel="mask-icon" href="/icon.svg" color="blue"> -->
 
   <!-- for Android -->
   <!-- <link rel="manifest" href="/my.webmanifest"> -->
